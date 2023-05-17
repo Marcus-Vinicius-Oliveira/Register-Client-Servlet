@@ -1,34 +1,23 @@
-# Projeto de Aplicativo de Jogo de Cartas de Filmes
+# Projeto de Cadastro e Listagem de Clientes - Página Web
 
-Este é um projeto para criar um aplicativo REST e Front-end para um jogo no estilo de cartas, onde os jogadores devem adivinhar qual filme tem a melhor avaliação no IMDB. O jogo consiste em informar um par de filmes e o jogador deve tentar acertar qual filme possui a pontuação mais alta no IMDB.
-
-## Requisitos
-
-O projeto atende aos seguintes requisitos:
-
-- Cada rodada do jogo consiste em informar um par de filmes aos jogadores.
-- O jogador deve tentar adivinhar qual filme possui a maior pontuação, avaliada em uma escala de 0.0 a 10.0.
-- Se o jogador escolher o filme vencedor corretamente, ele ganha 1 ponto.
-- Após responder, o jogador terá acesso a um novo par de filmes quando acessar o endpoint do quiz.
-- A listagem de jogadores exibe os jogadores em ordem decrescente de acordo com sua pontuação.
-
-## Tecnologias Utilizadas
-
-O projeto faz uso dos seguintes frameworks do Spring:
-
-- **Spring Boot**: um framework Java que simplifica o desenvolvimento de aplicativos, fornecendo configurações iniciais e facilitando a criação de APIs REST.
-- **Spring Web**: um módulo do Spring que fornece recursos para o desenvolvimento de aplicativos web RESTful.
-- **Spring Data**: um módulo do Spring que facilita a integração com bancos de dados, permitindo a persistência e recuperação de dados de forma simples e eficiente.
+Este projeto consiste em criar uma página web com formulário de cadastro e uma tela para listar os clientes já cadastrados. No formulário de cadastro, o usuário poderá informar o nome e CPF do cliente. Após o preenchimento, haverá um botão para executar a ação de cadastro, que chamará um servlet responsável pelo processamento. O servlet não precisa realizar validações, mas deve armazenar na sessão do usuário o cliente que foi cadastrado.
 
 ## Funcionalidades
 
 O projeto oferece as seguintes funcionalidades:
 
-- Exibir um par de filmes para o jogador adivinhar qual tem a melhor avaliação no IMDB.
-- Registrar a resposta do jogador e verificar se está correta.
-- Atualizar a pontuação do jogador e exibir o ranking dos jogadores em ordem decrescente.
-- Fornecer um novo par de filmes para o jogador continuar jogando.
-- Interface front-end para facilitar a interação do jogador.
+- Página de Cadastro: exibe um formulário para que o usuário informe o nome e CPF do cliente a ser cadastrado.
+- Ação de Cadastro: ao clicar no botão "Cadastrar", o servlet será acionado para processar o formulário e armazenar o cliente na sessão do usuário.
+- Página de Listagem: possui um botão/link para acessar a listagem de todos os clientes cadastrados na sessão do usuário.
+
+## Tecnologias Utilizadas
+
+O projeto faz uso das seguintes tecnologias:
+
+- **Java Servlet**: um componente Java que estende as capacidades de um servidor, permitindo o processamento de requisições e respostas HTTP.
+- **HTML**: uma linguagem de marcação para estruturar e exibir o conteúdo na web.
+- **CSS**: uma linguagem de estilo que define a aparência dos elementos HTML.
+- **JavaScript**: uma linguagem de programação que adiciona interatividade e comportamento à página web.
 
 ## Configuração e Execução
 
@@ -46,19 +35,9 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 ```
 
-3. Compile o projeto utilizando o Maven:
+3. Execute o projeto utilizando um servidor web, como o Apache Tomcat.
 
-```
-mvn compile
-```
-
-4. Execute o projeto:
-
-```
-mvn spring-boot:run
-```
-
-5. Acesse o aplicativo no navegador através da URL: `http://localhost:8080`
+4. Acesse a página de cadastro em seu navegador através da URL: `http://localhost:8080/cadastro.html`
 
 ## Contribuição
 
